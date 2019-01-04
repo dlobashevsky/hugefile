@@ -298,7 +298,7 @@ hfile_t* hfile_open(const char* base)
     log("uuids are differ");
     goto err;
   }
-  log("UUID is %s",rv->idx.header.uuid);
+//  log("UUID is %s",rv->idx.header.uuid);
 
   rv->idx.data=rv->idx.base+sizeof(rv->idx.header);
   rv->names.items=rv->names.base+sizeof(rv->names.header);
@@ -859,21 +859,14 @@ int hfile_stat(const hfile_t* h)
     return -1;
   }
 
-  
-
-/*
-TODO
-  resident size
-  mmaped size
-  uuid
-  bytes by phash (hash size)
-  names count
-  index size
-  files count
-  data size
-  creation time
-  
-*/
+  printf("UUID: %s\n",dict_get_uuid(h->names_dict));
+  printf("Resident size: %lu\n",dict_get_bytes(h->names_dict)+dict_get_bytes(h->meta_dict));
+  printf("Disk size: %lu\n",dict_get_bytes(h->names_dict)+dict_get_bytes(h->meta_dict)+h->idx.header.size+h->names.header.size+h->content.header.size);
+  printf("Total names: %u\n",dict_get_size(h->names_dict));
+  printf("Valid names: %u\n",h->names.header.chunks);
+  printf("Unique files: %u\n",h->content.header.chunks);
+  printf("Distinct properties: %u\n",dict_get_size(h->meta_dict));
+  printf("\n");
 
   return 0;
 }

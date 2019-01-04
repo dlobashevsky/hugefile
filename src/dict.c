@@ -333,7 +333,7 @@ uint64_t dict_get_bytes(const dict_t* ph)
 {
   if(!ph)
     return 0;
-  return cmph_packed_size(ph->hash)+sizeof(*ph)+sizeof(ph->data[0])*ph->sz+ph->msz;
+  return cmph_packed_size(ph->hash)+sizeof(*ph)+sizeof(ph->data[0])*ph->sz+ph->msz+1;
 }
 
 const char* dict_get_uuid(const dict_t* ph)
