@@ -1,0 +1,14 @@
+data.in/deep/deep/notempty
+data.in/deep/deep/empty
+data.in/3	sample-weight:3.1415926	sample-class:positive
+data.in/8
+data.in/4	key1:something	key2:13
+data.in/7
+data.in/9	key2:666	
+data.in/1	Content-Type:text/plain; charset=us-ascii
+data.in/6
+newname2	:data.in/2
+data.in/5
+data.in/dup4
+data.in/link9
+data.in/not_exists
