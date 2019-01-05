@@ -1,0 +1,13 @@
+data.in/link9	_name:data.in/link9	_uid:1000	_gid:1001	_mode:420	_atime:1546538932	_mtime:1546538932
+data.in/6	_name:data.in/6	_uid:1000	_gid:1001	_mode:420	_atime:1546538932	_mtime:1546538932
+data.in/1	_name:data.in/1	_uid:1000	_gid:1001	_mode:420	_atime:1546538932	_mtime:1546538932	Content-Type:text/plain; charset=us-ascii
+data.in/8	_name:data.in/8	_uid:1000	_gid:1001	_mode:420	_atime:1546538932	_mtime:1546538932
+data.in/3	_name:data.in/3	_uid:1000	_gid:1001	_mode:420	_atime:1546538932	_mtime:1546538932	sample-class:positive	sample-weight:3.1415926
+data.in/deep/deep/notempty	_name:data.in/deep/deep/notempty	_uid:1000	_gid:1001	_mode:420	_atime:1546538898	_mtime:1546538910
+data.in/9	_name:data.in/9	_uid:1000	_gid:1001	_mode:420	_atime:1546538932	_mtime:1546538932	key2:666
+data.in/4	_name:data.in/4	_uid:1000	_gid:1001	_mode:511	_atime:1546538932	_mtime:1546538932	key2:13	key1:something
+data.in/5	_name:data.in/5	_uid:1000	_gid:1001	_mode:420	_atime:1546538932	_mtime:1546538932
+data.in/7	_name:data.in/7	_uid:1000	_gid:1001	_mode:420	_atime:1546538932	_mtime:1546538932
+data.in/dup4	_name:data.in/dup4	_uid:1000	_gid:1001	_mode:420	_atime:1546538949	_mtime:1546538949
+newname2	_name:newname2	_uid:1000	_gid:1001	_mode:420	_atime:1546538932	_mtime:1546538932
+data.in/deep/deep/empty	_name:data.in/deep/deep/empty	_uid:1000	_gid:1001	_mode:420	_atime:1546538894	_mtime:1546538894

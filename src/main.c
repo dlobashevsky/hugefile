@@ -21,7 +21,7 @@ static const char* usage="hugefle manipulation program\n"
 "\tprint this help\n"
 "hugefile -c -d database_to_create -s source_filelist\n"
 "\tcreate hugefile from list of files, filelist format see in README.md, in simplest case it is a result of find $DIR -type f >filelist\n"
-"hugefile -x -d database -o target_folder [-f filter]\n"
+"hugefile -x -d database -o target_folder [-f filter] [-s filelist_for_mapping]\n"
 "\textract all (or selected) files from database to specified folder\n"
 "hugefile -t -d database\n"
 "\tperform consistency check, report out to stderr\n"
@@ -58,6 +58,7 @@ static int main_repair(const char* database,const char* output);
 static int main_list(const char* database,const char* output);
 static int main_memcache(const char* source);
 static int main_append(const char* database,const char* source,const char* output);
+static int main_join(const char* database1,const char* database2,const char* output);
 
 int main(int ac,char** av)
 {
@@ -76,7 +77,7 @@ int main(int ac,char** av)
 
   opterr=0;
 
-  while((c=getopt(ac,av,"hcxtpirlam:d:s:o:f:"))!=-1)
+  while((c=getopt(ac,av,"hcxtpirlad:s:o:f:"))!=-1)
     switch(c)
     {
       case 'h':
@@ -113,7 +114,7 @@ int main(int ac,char** av)
       case 'o':
         output=optarg;
         continue;
-
+/*
       case 'm':
         if(command)
         {
@@ -124,7 +125,7 @@ int main(int ac,char** av)
         command=c;
         source=optarg;
         continue;
-
+*/
       default:
         log("unknoun option -%c",c);
         fputs(usage,stderr);
