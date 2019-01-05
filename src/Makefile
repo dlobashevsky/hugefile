@@ -7,7 +7,7 @@ DBGFLAG = -ggdb3
 
 CFLAGS= -std=gnu11 -D_GNU_SOURCE -D_REENTRANT  $(DBGFLAG) -fPIC -Wall -Wno-parentheses -Wno-switch -Wno-pointer-sign -Wno-trampolines -Wno-unused-result
 
-LDFLAGS= -lcrypto -lcmph -luuid -lmagic -lm -lrt
+LDFLAGS= -lcrypto -lcmph -luuid -lm -lrt
 
 SRC= $(wildcard *.c)
 OBJS= $(SRC:.c=.o) 

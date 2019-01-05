@@ -1,5 +1,9 @@
 #!/bin/bash
 
+pushd data.out
+./clean.sh
+popd
+
 echo "Build test:" ; ./build.sh >/dev/null
 echo "Stat test:" ; ./stat.sh >/dev/null
 echo "Dump test:" ; ./dump.sh >/dev/null
